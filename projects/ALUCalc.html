@@ -2,7 +2,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
   
-    <title>ALU Calculator</title>
+    <title>FPGA ALU Calculator</title>
     <meta content="" name="descriptison">
     <meta content="" name="keywords">
   
@@ -48,16 +48,35 @@
                 <li><strong>Skills & Tools</strong>: Verilog, AMD/Xilinx Vivado, Xilinx FPGA, 7-Segment Display, Digital Logic Design</li>
                 <li><strong>Github URL</strong>: <a href="https://github.com/jedelist/ALU_Calculator" target="_blank">Project Link</a></li>
                 <li><strong>YouTube Video Demo</strong>: <a href="https://youtu.be/HjVlAyUau7E" target="_blank">Video Link</a></li>
+                <li><strong>Project PowerPoint</strong>: <a href="https://docs.google.com/presentation/d/13z5wgtebFeQxeys0NskuD5KInKZCcGRaRqS4RxtRTU0/edit?usp=sharing" target="_blank">Google Slide</a></li>
               </ul>
   
                 <p>
-                Fill in...             
+                  This Arithmatic Logic Unit (ALU) Calculator takes three inputs: A - a 4 bit binary number, B - 4 a bit binary number, and 
+                  Opcode - 4 bit binary number that directs the ALU operations on A and B. The two-digit decimal 
+                  results were then displayed on the 7-segment FPGA display. The one-digit Opcode was displayed 
+                  in hexadecimal on the FPGA's left most 7-segment display. Finally, an overflow LED flag and reset button were implemented 
+                  on the FPGA.
+                               
                 </p>
                 <p>
-                Fill in...
+                  ALU Calculator.v: Serves as the main module utilizing finite state machine (fsm.v),
+                   clock_divider.v, binary coded decimal (BCD.v), and decoder.v. It provides computation results for all operations.
                 </p>
                 <p>
-                Fill in...
+                  Clock Divider.v: Set the clock to oscillate at 1 kHz.
+                </p>
+                <p>
+                  BCD.v: Converted the binary result into 4-bit BCD format (7-segment standard), so results could be displayed elegantly.
+
+                </p>
+                <p>
+                  FSM.v: Rotates between 3 states at high frequency to display ALU calculator results on the FPGA's 7-segment display. 
+                  Used decoder file to resolve cathode and anode bit arrays for 7-segment displays.
+                </p>
+                <p>
+                  ALU_tb.v: This was the testbench file, used to simulate the system and generate simulated waveform outputs. This testbench
+                  and waveforms were used to ensure the ALU Calculator was functioning as intended prior to synthesis in lab.
                 </p>
             </div>
   
