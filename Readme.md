@@ -7,7 +7,7 @@ Currently, I am a Junior at Boston University majoring in Computer Engineering. 
 - CSS
 - Javascipt
 
-## Sections 📚
+## Sections 
 ✔️ About\
 ✔️ Education & Skills\
 ✔️ Experience\
